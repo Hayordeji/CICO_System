@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Check In Check Out System.props" />
+</Project>
