@@ -5,20 +5,23 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Check_In_Check_Out_System</RootNamespace>
+    <UserSecretsId>f7bf0162-dab5-4a38-b0a3-6482a62e8f84</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.36">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.14">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.36">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="NodaTime" Version="3.1.9" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.29" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 

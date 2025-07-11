@@ -1,4 +1,5 @@
-﻿using Check_In_Check_Out_System.Interfaces;
+﻿using Check_In_Check_Out_System.Dto;
+using Check_In_Check_Out_System.Interfaces;
 using Check_In_Check_Out_System.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +24,7 @@ namespace Check_In_Check_Out_System.Controllers
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
 
-        public IActionResult SignIn([FromBody] Record record)
+        public IActionResult SignIn([FromBody] SignInDto record)
         {
             //Check if Form is empty
             if (record == null)
@@ -50,8 +51,8 @@ namespace Check_In_Check_Out_System.Controllers
             var newRecord = new Record
             {
                 FullName = record.FullName,
-                Date = DateTime.Now.Date,
-                CheckIn = DateTime.Now.ToString(),
+                Date = DateTime.UtcNow.Date,
+                CheckIn = DateTime.UtcNow.ToString(),
                 CheckOut = null
             };
 
@@ -67,7 +68,7 @@ namespace Check_In_Check_Out_System.Controllers
         [HttpPut("signOut")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult SignOut([FromBody] Record record)
+        public IActionResult SignOut([FromBody] SignOutDto record)
         {
             //check if form is empty
             if (record == null)
@@ -131,7 +132,7 @@ namespace Check_In_Check_Out_System.Controllers
         [HttpGet("getNames/{name}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public IActionResult GetNames(string name)
+        public IActionResult GetRecordByNames(string name)
         {
             //check if record exists
             if (!_recordRepository.NameExists(name))

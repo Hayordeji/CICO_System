@@ -1,4 +1,5 @@
 ﻿using Check_In_Check_Out_System.Data;
+using Check_In_Check_Out_System.Dto;
 using Check_In_Check_Out_System.Interfaces;
 using Check_In_Check_Out_System.Models;
 using System.Linq;
@@ -48,9 +49,9 @@ namespace Check_In_Check_Out_System.Repository
             return Save();
         }
 
-        public bool SignOut(Record record)
+        public bool SignOut(SignOutDto record)
         {
-            var signOutTime = DateTime.Now.ToString();
+            var signOutTime = DateTime.UtcNow.ToString();
             Record recordToUpdate = GetRecordByName(record.FullName);
             recordToUpdate.CheckOut = signOutTime;
             _context.Update(recordToUpdate);
@@ -65,7 +66,7 @@ namespace Check_In_Check_Out_System.Repository
         public bool HasSignedInToday(string name)
         {
             // Check if the person has already been registered on the current day
-            DateTime today = DateTime.Now.Date;
+            DateTime today = DateTime.UtcNow.Date;
 
             var existingRecord = _context.Records.Where(a => a.FullName == name && a.Date == today).FirstOrDefault();
 

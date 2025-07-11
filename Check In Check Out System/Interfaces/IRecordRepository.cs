@@ -1,11 +1,12 @@
-﻿using Check_In_Check_Out_System.Models;
+﻿using Check_In_Check_Out_System.Dto;
+using Check_In_Check_Out_System.Models;
 
 namespace Check_In_Check_Out_System.Interfaces
 {
     public interface IRecordRepository
     {
         public bool SignIn(Record record);
-        public bool SignOut(Record record);
+        public bool SignOut(SignOutDto record);
         public bool HasSignedInToday(string name);
         public IEnumerable<Record> GetRecords();
         public IEnumerable<Record> GetRecordsByName(string name);

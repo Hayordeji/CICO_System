@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("f7bf0162-dab5-4a38-b0a3-6482a62e8f84")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Check In Check Out System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63d342adc8a2163333d8fe898cd1e61b10ed9795")]
 [assembly: System.Reflection.AssemblyProductAttribute("Check In Check Out System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Check In Check Out System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
