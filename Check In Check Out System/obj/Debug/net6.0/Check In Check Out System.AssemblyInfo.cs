@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Check In Check Out System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a7c43a5cb724c503b428795c2b3d9fd582ada9f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a320fef086c70ef35fef6722894f509061f4529")]
 [assembly: System.Reflection.AssemblyProductAttribute("Check In Check Out System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Check In Check Out System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

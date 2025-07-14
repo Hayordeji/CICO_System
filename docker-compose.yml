@@ -1,0 +1,11 @@
+services:
+  checkincheckoutsystem:
+    image: ${DOCKER_REGISTRY-}checkincheckoutsystem
+    build:
+      context: Check In Check Out System
+      dockerfile: Dockerfile
+      
+    environment:
+    - CONNECTION_STRING=Host=193.180.215.213:58701;Database=db_21f06868;Username=user_18078b6e;Password=5d512196f157f01f7b50da5794d9b525;Port=58701;Trust Server Certificate =True;
+    volumes:
+    - ./Check In Check Out System:/app
